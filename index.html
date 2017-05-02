@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>jdmh</title>
+
+    <script>
+      let d = true;
+      setInterval(() => {
+        const under = document.querySelector(".flash");
+        if (d) under.style.visibility = "hidden";
+        else under.style.visibility = "visible";
+        d = !d;
+      }, 700);
+    </script>
+
+  </head>
+  <body>
+    <div class="content">
+        <h1 class="my-name">joshua maas-howard</h1>
+        <h2 class="my-job" class='flash'>Developer<span class="flash">&nbsp;_</span></h2>
+
+        <footer>
+          <div class="social-icons">
+            <a href="about.html" title="about me"><img src="images/profile.png"></a>&nbsp;
+            <a href="mailto:j.maas.howard@gmail.com" title="message me"><img src="images/mail.png"></a>&nbsp;
+            <a href="https://www.linkedin.com/in/joshua-maas-howard-04a98937/" title="link to me"><img src="images/linkedin.png"></a>&nbsp;
+            <a href="https://www.github.com/hoshmn" title="git at me"><img src="images/github.png"></a>&nbsp;
+            <a href="images/cv.pdf" title="resu mé" download><img src="images/download.png"></a>
+            <span class="to-about"><a href="about.html" title="about me"><img src="images/right.png"></a></span>
+          </div>
+        </footer>
+    </div>
+  </body>
+</html>
