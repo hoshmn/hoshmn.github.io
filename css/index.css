@@ -1,4 +1,4 @@
-
+/*RESET*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,6 +43,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/**/
 
 .content {
 	position: absolute;
@@ -66,10 +67,6 @@ footer {
 	right: 0;
 }
 
-header, .header {
-	width: 100%;
-	height: 100px;
-}
 
 a {
     text-decoration: none;
@@ -105,9 +102,8 @@ a:hover {
 .headshot {
 	width: 160px;
 	height: 160px;
-	/*height: 160px;*/
 	border: 5px solid #313f53;
-	/*border-top: 5px solid #313f53;*/
+	border-right: none;
 }
 
 p.speech {
@@ -169,12 +165,10 @@ p.speech:after {
 	color: #efefef;
 }
 
-.divider {
+/*.divider {
 	width:100%;
-
 	position: relative;
-	/*height:;*/
-}
+}*/
 
 #glass {
 	width:100%;
@@ -214,26 +208,5 @@ p.speech:after {
 	color: #a4a4a4;
 	font-weight: bolder;
 }
-
-/*.headshot-porthole, .headshot-wrapper {
-  transform-origin: 50% 50%;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
-}
-.headshot-porthole {
-  transform: rotate(30deg) ;
-}
-.headshot-porthole .headshot-wrapper {
-  width: 180px;
-  height: 180px;
-  transform: rotate(-30deg);
-  border: 9px solid #1a1f33;q
-}
-.headshot-porthole img {
-  width: 100%;
-  height: auto;
-}
-*/
 
 
