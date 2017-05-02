@@ -53,7 +53,8 @@ table {
 	display: flex;
   	flex-direction: column;
  	justify-content: center;
- 	overflow: scroll;
+ 	overflow-y: scroll;
+ 	overflow-x: hidden;
 }
 
 footer {
@@ -68,6 +69,15 @@ footer {
 header, .header {
 	width: 100%;
 	height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #efefef;
+}
+
+a:hover {
+    color: #e2d411;
 }
 
 
@@ -95,9 +105,9 @@ header, .header {
 .headshot {
 	width: 160px;
 	height: 160px;
-
-	border-left: 5px solid #313f53;
-	border-top: 5px solid #313f53;
+	/*height: 160px;*/
+	border: 5px solid #313f53;
+	/*border-top: 5px solid #313f53;*/
 }
 
 p.speech {
@@ -107,7 +117,7 @@ p.speech {
     color: #e2d411;
     text-align: center;
     line-height: 100px;
-    border: 3px solid #666;
+    border: 3px solid #a4a4a4;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -121,7 +131,7 @@ p.speech:before {
     left: -30px;
     top: 50px;
     border: 15px solid;
-    border-color: transparent #666 transparent transparent;
+    border-color: transparent #a4a4a4 transparent transparent;
 }
 
 p.speech:after {
@@ -152,7 +162,7 @@ p.speech:after {
 	color: aqua;
 	font-size: 1em;
 	margin: 10px;
-
+	max-width: 600px;
 }
 
 .below {
@@ -193,6 +203,16 @@ p.speech:after {
 .to-home {
 	position: absolute;
 	left: 5px;
+}
+
+.helipad {
+	width: 40px;
+	margin: 0 auto;
+}
+
+.helicopter {
+	color: #a4a4a4;
+	font-weight: bolder;
 }
 
 /*.headshot-porthole, .headshot-wrapper {

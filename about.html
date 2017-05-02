@@ -2,8 +2,8 @@
 <div class="content">
 
 	<div class="intro">
-	<img class ="headshot" src="images/head.jpg" alt="headshot">
-	<p class="speech"> Howdy, stranger! I'm Josh.</p>
+		<img class ="headshot" src="images/blue-steel.png" alt="blue steel">
+		<p class="speech"> Howdy, stranger! I'm Josh.</p>
 	</div>
 
 	<div class="backed-content">
@@ -11,7 +11,9 @@
 		<span class="symbol">/</span>
 		tinkerer 
 		<span class="symbol">/</span>
-		inventor who loves riddles 
+		inventor who 
+		<span class="symbol"><3</span>
+		riddles 
 		<span class="symbol">&</span>
 		building things with code that bring a bit of 
 		<span class="symbol">+</span>
@@ -20,13 +22,27 @@
 
 	<div class="divider">
 	<!-- <a class="back" href="index.html" title="home"><img src="images/left.png"></a> -->
-		<img id="glass" src="images/glasss.jpg" alt="glass">
+		<!-- <img id="glass" src="images/glasss.jpg" alt="glass"> -->
+	<span class="symbol">_</span>
+
 	</div>
 
-	<h2 class="tagline below"> At UC Berkeley I was introduced to the inventive and productive power of programming. I have since fleshed out skills in full-stack JavaScript web development. Check out my LinkedIn, Github, or CV (all below) for a sense of the projects I've been involved in.
+	<h2 class="tagline below"> At UC Berkeley I was introduced to the inventive and productive power of programming. I have since fleshed out skills in full-stack JavaScript web development. Check out my 
+	<a href="https://www.linkedin.com/in/joshua-maas-howard-04a98937/" title="link to me">LinkedIn</a>,
+	<a href="https://www.github.com/hoshmn" title="git at me">Github</a>, or
+	<a href="images/cv.pdf" title="resu mé" download>CV</a>
+	for a sense of the projects I've been involved in. Or click a toy project!
 	</h2>
 	<h2 class="tagline below">Besides a developer, I also consider myself a cyclist, photographer, <span class="symbol">&</span> world adventurer. 
 	</h2>
+
+	<div class="helipad">
+	<a class="helicopter" href="https://hoshmn.github.io/cues/" target="_blank">
+	<div>&nbsp;</div>
+	<div>X</div>
+	<div>&nbsp;</div>
+	</a>
+	</div>
 
 	<footer>
 	  <div class="social-icons">
@@ -40,6 +56,33 @@
 	</footer>
 
 	</div>
+
+	<script>
+		const opened = `<div>\\ /</div><div>> x <</div><div>/ \\</div>`;
+		const closed = `<div>/ \\</div><div>\< X \></div><div>\\ /</div>`;
+		const heli = document.querySelector('.helicopter');
+
+		oscillate(opened, closed, heli);
+		//oscillate [the speed of oscillation btw 2 states] btw a max&min
+		function oscillate(open,clos,target,minFreq=600,maxFreq=3,rate=1.1){
+			let bloomed = true;
+			let accel = true;
+			flick(minFreq);
+
+			function flick(freq){
+				setTimeout(() => {
+					target.innerHTML = bloomed ? open : clos;
+					bloomed = !bloomed;
+					if (freq<maxFreq || freq>minFreq) accel = !accel;
+					accel ? freq/=rate : freq*=rate;
+
+					flick(freq);
+				}, freq);
+			}
+		}
+
+
+	</script>
 
 	<!-- 
 	<p class="about">
