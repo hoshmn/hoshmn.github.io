@@ -47,7 +47,7 @@ table {
 
 .content {
 	position: absolute;
-	background: #171717;
+	background: #282828;
 	height: 100vh;
 	width: 100%;
 	text-align: center;
@@ -138,7 +138,7 @@ p.speech:after {
     left: -18px;
     top: 55px;
     border: 9px solid;
-    border-color: transparent #171717 transparent transparent;
+    border-color: transparent #282828 transparent transparent;
 }
 
 .intro {
@@ -186,7 +186,7 @@ p.speech:after {
 
 .backed-content {
 	z-index: 1;
-	background: #171717;
+	background: #282828;
 }
 
 .to-about {
