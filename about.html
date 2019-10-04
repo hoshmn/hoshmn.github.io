@@ -24,17 +24,17 @@
 		<span class="symbol">_</span>
 	</div>
 
-	<h2 class="tagline below"> At UC Berkeley I was introduced to the inventive and productive power of programming. I have since fleshed out skills in full-stack JavaScript web development. Check out my 
+	<h2 class="tagline below"> At UC Berkeley I was introduced to the inventive and productive power of programming. I have since fleshed out skills in full-stack JavaScript software engineering. Check out my 
 		<a href="https://www.linkedin.com/in/joshua-maas-howard-04a98937/" title="link to me">LinkedIn</a>,
 		<a href="https://www.github.com/hoshmn" title="git at me">Github</a>, or
 		<a href="images/cv.pdf" title="resu mé" download>CV</a>
-	for a sense of the projects I've been involved in. Or click a toy project!
+	for a sense of the projects I've been involved in. Or drop me a <a href="mailto:j.maas.howard@gmail.com" title="message me" target="_blank" >line</a>!
 	</h2>
 	<h2 class="tagline below">Besides a developer, I also consider myself a cyclist, photographer, <span class="symbol">&</span> world adventurer. 
 	</h2>
 
 	<div class="helipad">
-		<a class="helicopter" href="https://hoshmn.github.io/cues/" target="_blank">
+		<a class="helicopter">
 			<div>&nbsp;</div>
 			<div>X</div>
 			<div>&nbsp;</div>
@@ -48,20 +48,21 @@
 	    <a href="https://www.linkedin.com/in/joshua-maas-howard-04a98937/" title="link to me"><img src="images/linkedin.png"></a>&nbsp;
 	    <a href="https://www.github.com/hoshmn" title="git at me"><img src="images/github.png"></a>&nbsp;
 	    <a href="images/cv.pdf" title="resu mé" download><img src="images/download.png"></a>
-	    <span class="to-home"><a href="index.html" title="ho me"><img src="images/left.png"></a></span>
+	    <span class="to-home"><a href="index.html" title="home"><img src="images/left.png"></a></span>
 	  </div>
 	</footer>
 
 	</div>
 
 	<script>
+		//clearly not following best practices! just tinkering around...
 		const opened = `<div>\\ /</div><div>> x <</div><div>/ \\</div>`;
 		const closed = `<div>/ \\</div><div>\< X \></div><div>\\ /</div>`;
 		const heli = document.querySelector('.helicopter');
 
 		oscillate(opened, closed, heli);
 		//oscillate [the speed of oscillation btw 2 states] btw a max&min freq
-		function oscillate(open,clos,target,minFreq=600,maxFreq=3,rate=1.1){
+		function oscillate(open, clos, target, minFreq=600, maxFreq=3, rate=1.1){
 			let bloomed = true;
 			let accel = true;
 			flick(minFreq);
@@ -70,8 +71,8 @@
 				setTimeout(() => {
 					target.innerHTML = bloomed ? open : clos;
 					bloomed = !bloomed;
-					if (freq<maxFreq || freq>minFreq) accel = !accel;
-					accel ? freq/=rate : freq*=rate;
+					if (freq < maxFreq || freq > minFreq) accel = !accel;
+					accel ? freq /= rate : freq *= rate;
 
 					flick(freq);
 				}, freq);
